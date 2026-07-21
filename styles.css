@@ -2246,3 +2246,48 @@ a.member-logo-card:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Official association logo */
+
+.brand-symbol,
+.footer-brand .brand-symbol {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  overflow: visible;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.brand-symbol::before,
+.brand-symbol::after {
+  display: none;
+  content: none;
+}
+
+.brand-symbol > span {
+  display: none;
+}
+
+.brand-symbol img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-brand .brand-symbol {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 680px) {
+  .brand-symbol,
+  .footer-brand .brand-symbol {
+    flex-basis: 44px;
+    width: 44px;
+    height: 44px;
+  }
+}
