@@ -1459,6 +1459,18 @@ a.member-logo-card:focus-visible {
   object-fit: contain;
 }
 
+.member-logo-card--name {
+  background: #f8fafc;
+}
+
+.member-logo-card--name span {
+  color: var(--navy-900);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
 .member-logo-card--zerocool img {
   width: 188px;
   max-height: 44px;
@@ -2164,6 +2176,10 @@ a.member-logo-card:focus-visible {
   .member-logo-card img {
     max-width: 166px;
     max-height: 48px;
+  }
+
+  .member-logo-card--name span {
+    font-size: 15px;
   }
 
   .member-logo-card--zerocool img {
