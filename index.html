@@ -3,418 +3,481 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#071f2a">
+  <meta name="theme-color" content="#0b2e57">
   <meta name="format-detection" content="telephone=no">
 
-  <title>세종전세버스운송사업조합</title>
+  <title>세종특별자치시 전세버스운송사업조합</title>
   <meta
     name="description"
-    content="세종전세버스운송사업조합은 조합원의 권익 증진과 안전한 전세버스 운행 문화를 지원합니다."
+    content="세종특별자치시 전세버스운송사업조합 공식 홈페이지입니다. 조합 공문, 업무서식, 운수종사자 교육과 안전운행 정보를 제공합니다."
   >
 
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&family=Noto+Serif+KR:wght@600;700&display=swap"
     rel="stylesheet"
   >
-  <link rel="stylesheet" href="./styles.css?v=sejong-association-1">
+  <link rel="stylesheet" href="./styles.css?v=formal-20260721">
 </head>
 
 <body>
   <a class="skip-link" href="#mainContent">본문 바로가기</a>
 
   <div class="utility-bar">
-    <div class="utility-inner">
-      <p>SEJONG CHARTER BUS ASSOCIATION</p>
+    <div class="site-width utility-inner">
+      <p>사단법인 세종특별자치시 전세버스운송사업조합</p>
       <div>
-        <a href="#safety">안전운행 안내</a>
-        <button type="button" data-open-modal="memberLogin">조합원 로그인</button>
+        <a href="tel:0448653258">대표전화 044-865-3258</a>
+        <span aria-hidden="true"></span>
+        <button type="button" data-open-modal="memberLogin">조합원 업무시스템</button>
       </div>
     </div>
   </div>
 
   <header class="site-header" id="top">
-    <div class="header-inner">
-      <a class="brand" href="#top" aria-label="세종전세버스운송사업조합 홈">
-        <span class="brand-mark" aria-hidden="true">
-          <i></i><i></i><i></i>
+    <div class="site-width header-inner">
+      <a class="brand" href="#top" aria-label="세종특별자치시 전세버스운송사업조합 홈">
+        <span class="brand-symbol" aria-hidden="true">
+          <span>S</span>
         </span>
         <span class="brand-copy">
-          <strong>세종전세버스운송사업조합</strong>
-          <small>SEJONG CHARTER BUS ASSOCIATION</small>
+          <strong>세종특별자치시 전세버스운송사업조합</strong>
+          <small>SEJONG CHARTERED BUS TRANSPORTATION ASSOCIATION</small>
         </span>
       </a>
 
       <nav class="desktop-nav" aria-label="주요 메뉴">
-        <a href="#about">조합소개</a>
-        <a href="#members">회원사안내</a>
-        <a href="#resources">공문·자료</a>
-        <a href="#safety">종사자교육</a>
-        <a href="#contact">알림마당</a>
+        <a href="#chairman">조합소개</a>
+        <a href="#organization">조직도</a>
+        <a href="#resources">공문·자료실</a>
+        <a href="#education">종사자교육</a>
+        <a href="#information">조합안내</a>
       </nav>
 
-      <button
-        class="search-button"
-        type="button"
-        aria-label="통합검색 열기"
-        data-open-modal="siteSearch"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="11" cy="11" r="6.5"></circle>
-          <path d="m16 16 4.2 4.2"></path>
-        </svg>
-      </button>
+      <div class="header-actions">
+        <button
+          class="search-button"
+          type="button"
+          aria-label="통합검색 열기"
+          data-open-modal="siteSearch"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="m16 16 4.2 4.2"></path>
+          </svg>
+        </button>
 
-      <button
-        class="menu-button"
-        id="menuButton"
-        type="button"
-        aria-expanded="false"
-        aria-controls="mobileNav"
-      >
-        <span></span><span></span><span></span>
-        <span class="sr-only">메뉴 열기</span>
-      </button>
+        <button
+          class="menu-button"
+          id="menuButton"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+          <span></span><span></span><span></span>
+          <span class="sr-only">메뉴 열기</span>
+        </button>
+      </div>
     </div>
 
     <nav class="mobile-nav" id="mobileNav" aria-label="모바일 메뉴">
-      <p>SEJONG ASSOCIATION</p>
-      <a href="#about">조합소개</a>
-      <a href="#members">회원사안내</a>
-      <a href="#resources">공문·자료</a>
-      <a href="#safety">종사자교육</a>
-      <a href="#contact">알림마당</a>
-      <button type="button" data-open-modal="memberLogin">조합원 로그인</button>
+      <div class="site-width mobile-nav-inner">
+        <a href="#chairman"><strong>조합소개</strong><small>이사장 인사말</small></a>
+        <a href="#organization"><strong>조직도</strong><small>조합 운영체계</small></a>
+        <a href="#resources"><strong>공문·자료실</strong><small>공지 및 업무서식</small></a>
+        <a href="#education"><strong>종사자교육</strong><small>교육·안전 안내</small></a>
+        <a href="#information"><strong>조합안내</strong><small>연락처·오시는 길</small></a>
+        <button type="button" data-open-modal="memberLogin">조합원 업무시스템</button>
+      </div>
     </nav>
   </header>
 
   <main id="mainContent">
     <section class="hero-section" aria-labelledby="heroTitle">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-route route-one" aria-hidden="true"></div>
-      <div class="hero-route route-two" aria-hidden="true"></div>
-
-      <div class="hero-inner">
-        <div class="hero-copy reveal">
-          <p class="hero-kicker">
-            <span></span>
-            세종의 단체 이동을 위한 공공 파트너
-          </p>
+      <div class="hero-city-grid" aria-hidden="true"></div>
+      <div class="site-width hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker">안전한 운행 · 신뢰받는 전세버스 · 함께하는 조합</p>
           <h1 id="heroTitle">
-            세종의 모든 길에<br>
-            <em>더 안전한 기준을.</em>
+            세종의 전세버스 산업을<br>
+            <span>든든하게 잇겠습니다.</span>
           </h1>
           <p class="hero-description">
-            조합원사의 안정적인 경영과 운수종사자의 안전 운행을 지원하고,
-            신뢰할 수 있는 전세버스 문화를 함께 만듭니다.
+            조합원사의 권익을 보호하고 운수종사자 교육과 안전관리,
+            관계기관 협력을 통해 건전한 전세버스 운송 질서를 만들어갑니다.
           </p>
-
           <div class="hero-actions">
-            <a class="primary-button" href="#resources">
-              공문·자료 확인
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
-            </a>
-            <a class="ghost-button" href="#services">업무 바로가기</a>
-          </div>
-
-          <div class="hero-coordinate" aria-label="세종시 기준 좌표">
-            <span>36.4800° N</span>
-            <i></i>
-            <span>127.2890° E</span>
+            <a class="primary-button" href="#resources">공문·자료 확인</a>
+            <a class="secondary-button" href="#information">조합 연락처</a>
           </div>
         </div>
 
-        <div class="route-board reveal" aria-label="세종 주요 권역 연결 안내">
-          <div class="route-board-head">
+        <aside class="hero-notice" aria-label="주요 업무 알림">
+          <div class="hero-notice-head">
+            <span>주요 업무 알림</span>
+            <time datetime="2026-02-02">2026.02.02</time>
+          </div>
+          <strong>세종조합 관리비 인상 안내</strong>
+          <p>2026년 2월 1일 책임개시 계약 건부터 변경된 관리비가 적용됩니다.</p>
+          <dl>
             <div>
-              <span>SEJONG NETWORK</span>
-              <strong>안전운행 지원망</strong>
+              <dt>기존</dt>
+              <dd>150,000원</dd>
             </div>
-            <span class="live-badge"><i></i> 운영 안내</span>
-          </div>
-
-          <div class="route-map">
-            <svg viewBox="0 0 520 380" role="img" aria-label="세종 권역을 연결한 노선 그래픽">
-              <defs>
-                <linearGradient id="routeGradient" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#76f3ca"></stop>
-                  <stop offset="1" stop-color="#3d82ff"></stop>
-                </linearGradient>
-                <filter id="routeGlow" x="-30%" y="-30%" width="160%" height="160%">
-                  <feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
-                  <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
-                </filter>
-              </defs>
-              <path class="map-line muted" d="M32 92C117 54 126 156 207 143S292 49 371 81s69 120 121 83"></path>
-              <path class="map-line active" d="M48 308c67-15 69-105 139-108s97 88 161 59 63-110 123-137"></path>
-              <path class="map-line branch" d="M187 200c-20 60 35 98 4 153"></path>
-              <circle class="route-pulse" cx="187" cy="200" r="8"></circle>
-              <circle class="route-pulse pulse-two" cx="348" cy="259" r="8"></circle>
-            </svg>
-
-            <span class="route-label label-jowon">조치원</span>
-            <span class="route-label label-dodam">도담</span>
-            <span class="route-label label-naseong">나성</span>
-            <span class="route-label label-boram">보람</span>
-            <span class="route-label label-daepyeong">대평</span>
-
-            <div class="route-bus" aria-hidden="true">
-              <svg viewBox="0 0 44 44">
-                <rect x="8" y="5" width="28" height="31" rx="8"></rect>
-                <path d="M12 13h20v10H12zM14 28h3M27 28h3"></path>
-                <circle cx="14" cy="36" r="3"></circle>
-                <circle cx="30" cy="36" r="3"></circle>
-              </svg>
+            <div class="fee-arrow" aria-hidden="true">→</div>
+            <div>
+              <dt>변경</dt>
+              <dd>180,000원</dd>
             </div>
-          </div>
-
-          <div class="route-board-foot">
-            <span>조합 행정지원</span>
-            <span>운수종사자 교육</span>
-            <span>교통안전 정보</span>
-          </div>
-        </div>
+          </dl>
+          <a href="#resources" data-resource-tab="notices">공문 내용 확인</a>
+        </aside>
       </div>
+      <div class="hero-rule" aria-hidden="true"></div>
     </section>
 
-    <section class="service-dock" id="services" aria-labelledby="serviceTitle">
-      <div class="section-shell">
-        <div class="compact-heading reveal">
-          <p class="eyebrow">QUICK SERVICE</p>
-          <h2 id="serviceTitle">필요한 업무를 바로 찾으세요.</h2>
+    <section class="quick-service" aria-labelledby="quickTitle">
+      <div class="site-width">
+        <div class="section-heading compact">
+          <div>
+            <p>QUICK SERVICE</p>
+            <h2 id="quickTitle">주요 업무 바로가기</h2>
+          </div>
+          <span>조합 업무에 필요한 메뉴를 빠르게 이용하실 수 있습니다.</span>
         </div>
 
         <div class="quick-grid">
-          <button class="quick-card reveal" type="button" data-open-modal="driverSystem">
+          <button type="button" class="quick-link" data-open-modal="driverSystem">
+            <span class="quick-number">01</span>
             <span class="quick-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V8l3-4h10l3 4v11M4 13h16M7 17h.01M17 17h.01M7 8h10"></path></svg>
             </span>
-            <span><strong>운수종사자 관리</strong><small>조합원 전용 시스템</small></span>
+            <span class="quick-copy"><strong>운수종사자 관리</strong><small>조합원 업무시스템</small></span>
           </button>
 
-          <a class="quick-card reveal" href="#resources" data-resource-tab="files">
+          <a class="quick-link" href="#resources" data-resource-tab="files">
+            <span class="quick-number">02</span>
             <span class="quick-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6l2 3h8v13H4zM8 12h8M8 16h5"></path></svg>
             </span>
-            <span><strong>자료실</strong><small>서식과 업무자료</small></span>
+            <span class="quick-copy"><strong>업무 자료실</strong><small>서식 및 관련 법령</small></span>
           </a>
 
-          <a class="quick-card reveal" href="https://www.cyberts.kr/" target="_blank" rel="noopener noreferrer">
+          <a class="quick-link" href="https://www.cyberts.kr/" target="_blank" rel="noopener noreferrer">
+            <span class="quick-number">03</span>
             <span class="quick-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v5c0 5.1 3.4 8.2 8 9 4.6-.8 8-3.9 8-9V7zM8.5 12l2.2 2.2 4.8-5"></path></svg>
             </span>
-            <span><strong>사이버검사소</strong><small>TS 자동차검사</small></span>
+            <span class="quick-copy"><strong>사이버검사소</strong><small>TS 자동차검사</small></span>
           </a>
 
-          <a class="quick-card reveal" href="https://www.kotsa.or.kr/safeinfo" target="_blank" rel="noopener noreferrer">
+          <a class="quick-link" href="https://www.kotsa.or.kr/safeinfo" target="_blank" rel="noopener noreferrer">
+            <span class="quick-number">04</span>
             <span class="quick-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V9M12 20V4M19 20v-7M3 20h18"></path></svg>
             </span>
-            <span><strong>교통안전정보</strong><small>전세버스 정보공시</small></span>
+            <span class="quick-copy"><strong>교통안전정보</strong><small>전세버스 정보공시</small></span>
           </a>
 
-          <a class="quick-card reveal" href="https://nmcb.org/cooperative/user/main.do" target="_blank" rel="noopener noreferrer">
+          <a class="quick-link" href="https://nmcb.org/cooperative/user/main.do" target="_blank" rel="noopener noreferrer">
+            <span class="quick-number">05</span>
             <span class="quick-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3.5 7.5 12 12l8.5-4.5zM5 11v6l7 4 7-4v-6"></path></svg>
             </span>
-            <span><strong>전세버스공제</strong><small>전국 공제조합</small></span>
+            <span class="quick-copy"><strong>전세버스공제조합</strong><small>공제 업무 안내</small></span>
           </a>
 
-          <a class="quick-card reveal" href="#safety">
+          <a class="quick-link" href="#education">
+            <span class="quick-number">06</span>
             <span class="quick-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4"></path></svg>
             </span>
-            <span><strong>교육일정</strong><small>안전교육 안내</small></span>
+            <span class="quick-copy"><strong>교육 일정</strong><small>종사자 안전교육</small></span>
           </a>
         </div>
       </div>
     </section>
 
     <section class="resource-section" id="resources" aria-labelledby="resourceTitle">
-      <div class="section-shell resource-layout">
-        <div class="resource-intro reveal">
-          <p class="eyebrow">NOTICE &amp; ARCHIVE</p>
-          <h2 id="resourceTitle">업무에 필요한 소식을<br>한곳에 모았습니다.</h2>
-          <p>공문, 서식, 교육 일정을 빠르게 찾을 수 있도록 구성했습니다.</p>
-
-          <label class="resource-search">
-            <span class="sr-only">게시물 검색</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg>
-            <input id="resourceSearch" type="search" placeholder="검색어를 입력하세요" autocomplete="off">
-          </label>
-        </div>
-
-        <div class="resource-board reveal">
-          <div class="resource-tabs" role="tablist" aria-label="자료 구분">
-            <button class="active" type="button" role="tab" aria-selected="true" data-tab="notices">공문서</button>
-            <button type="button" role="tab" aria-selected="false" data-tab="files">자료실</button>
-            <button type="button" role="tab" aria-selected="false" data-tab="education">교육일정</button>
-          </div>
-
-          <div class="resource-list" id="resourceList" aria-live="polite"></div>
-          <p class="resource-empty" id="resourceEmpty" hidden>검색 결과가 없습니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section" id="about" aria-labelledby="aboutTitle">
-      <div class="section-shell about-layout">
-        <div class="about-visual reveal" aria-hidden="true">
-          <div class="about-road road-a"></div>
-          <div class="about-road road-b"></div>
-          <div class="about-center-mark">
-            <span>SEJONG</span>
-            <strong>함께 가는 길</strong>
-          </div>
-          <span class="about-dot dot-a"></span>
-          <span class="about-dot dot-b"></span>
-          <span class="about-dot dot-c"></span>
-        </div>
-
-        <div class="about-copy reveal">
-          <p class="eyebrow">ABOUT THE ASSOCIATION</p>
-          <h2 id="aboutTitle">연결하고, 지원하고,<br>안전의 기준을 높입니다.</h2>
-          <p>
-            세종전세버스운송사업조합은 조합원사의 공동 이익을 증진하고,
-            운수종사자와 이용객 모두가 안심할 수 있는 교통문화를 만드는 일을 합니다.
-          </p>
-
-          <div class="value-list">
-            <article>
-              <span>01</span>
-              <div><strong>조합원 권익 지원</strong><p>경영과 행정 업무에 필요한 정보를 신속하게 안내합니다.</p></div>
-            </article>
-            <article>
-              <span>02</span>
-              <div><strong>안전운행 문화</strong><p>교육과 점검 정보를 연결해 지속적인 안전 관리를 돕습니다.</p></div>
-            </article>
-            <article>
-              <span>03</span>
-              <div><strong>지역 이동 협력</strong><p>세종의 공공·기업·학교 단체 이동 생태계를 연결합니다.</p></div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="safety-section" id="safety" aria-labelledby="safetyTitle">
-      <div class="section-shell safety-layout">
-        <div class="safety-copy reveal">
-          <p class="eyebrow light">SAFETY CHECK</p>
-          <h2 id="safetyTitle">출발 전 60초,<br>안전을 확인하세요.</h2>
-          <p>체크 항목은 현재 브라우저에 자동 저장됩니다.</p>
-
-          <div class="safety-progress" aria-label="안전 점검 진행률">
-            <div><span id="safetyProgressBar"></span></div>
-            <strong id="safetyProgressText">0 / 5 완료</strong>
-          </div>
-        </div>
-
-        <div class="checklist reveal" id="safetyChecklist">
-          <label><input type="checkbox" value="vehicle"><span></span><strong>차량 외부와 타이어 상태를 확인했습니다.</strong></label>
-          <label><input type="checkbox" value="emergency"><span></span><strong>비상망치·소화기 위치와 상태를 확인했습니다.</strong></label>
-          <label><input type="checkbox" value="seatbelt"><span></span><strong>안전띠와 좌석 상태를 확인했습니다.</strong></label>
-          <label><input type="checkbox" value="route"><span></span><strong>운행 경로와 휴게 계획을 확인했습니다.</strong></label>
-          <label><input type="checkbox" value="condition"><span></span><strong>운전자 컨디션과 음주 여부를 확인했습니다.</strong></label>
-          <button id="resetChecklist" type="button">점검 초기화</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="members-section" id="members" aria-labelledby="membersTitle">
-      <div class="section-shell">
-        <div class="section-heading reveal">
+      <div class="site-width">
+        <div class="section-heading">
           <div>
-            <p class="eyebrow">MEMBER SUPPORT</p>
-            <h2 id="membersTitle">회원사와 함께 만드는<br>더 나은 운행 환경</h2>
+            <p>NOTICE &amp; ARCHIVE</p>
+            <h2 id="resourceTitle">공문·자료실</h2>
           </div>
-          <p>회원사 정보는 조합의 공식 자료가 확인되는 대로 등록할 수 있도록 별도 데이터 영역으로 준비했습니다.</p>
+          <span>조합 공지와 업무자료를 분류별로 확인할 수 있습니다.</span>
         </div>
 
-        <div class="member-service-grid">
-          <article class="member-service-card reveal">
-            <span>경영</span>
-            <h3>행정·제도 지원</h3>
-            <p>운송사업 관련 제도와 행정 절차를 이해하기 쉽게 안내합니다.</p>
-          </article>
-          <article class="member-service-card reveal">
-            <span>안전</span>
-            <h3>교육·점검 지원</h3>
-            <p>정기 교육과 차량 점검에 필요한 일정을 한곳에서 확인합니다.</p>
-          </article>
-          <article class="member-service-card reveal">
-            <span>연결</span>
-            <h3>기관·업체 협력</h3>
-            <p>공공기관과 회원사의 원활한 협업을 위한 연결 창구를 제공합니다.</p>
+        <div class="resource-layout">
+          <div class="resource-board">
+            <div class="resource-toolbar">
+              <div class="resource-tabs" role="tablist" aria-label="자료 분류">
+                <button class="active" type="button" role="tab" aria-selected="true" data-tab="notices">공문·공지</button>
+                <button type="button" role="tab" aria-selected="false" data-tab="files">업무자료</button>
+                <button type="button" role="tab" aria-selected="false" data-tab="education">교육안내</button>
+              </div>
+              <label class="resource-search">
+                <span class="sr-only">자료 검색</span>
+                <input id="resourceSearch" type="search" placeholder="검색어 입력">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="6.5"></circle>
+                  <path d="m16 16 4.2 4.2"></path>
+                </svg>
+              </label>
+            </div>
+
+            <div class="resource-list" id="resourceList" aria-live="polite"></div>
+            <p class="resource-empty" id="resourceEmpty" hidden>검색 결과가 없습니다.</p>
+          </div>
+
+          <aside class="office-panel">
+            <div class="office-panel-title">
+              <p>조합 사무국</p>
+              <strong>업무 문의 안내</strong>
+            </div>
+            <dl>
+              <div><dt>대표전화</dt><dd><a href="tel:0448653258">044-865-3258</a></dd></div>
+              <div><dt>팩스</dt><dd>044-865-3236</dd></div>
+              <div><dt>이메일</dt><dd><a href="mailto:sejongbus@naver.com">sejongbus@naver.com</a></dd></div>
+              <div><dt>담당</dt><dd>우승희</dd></div>
+            </dl>
+            <p class="office-note">공문 및 업무서류를 보내실 때 조합명과 회원사명을 정확히 기재해 주시기 바랍니다.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="chairman-section" id="chairman" aria-labelledby="chairmanTitle">
+      <div class="site-width">
+        <div class="section-heading light">
+          <div>
+            <p>CHAIRMAN'S MESSAGE</p>
+            <h2 id="chairmanTitle">이사장 인사말</h2>
+          </div>
+          <span>현장의 목소리를 듣고 조합원과 함께 나아가겠습니다.</span>
+        </div>
+
+        <div class="chairman-layout">
+          <div class="chairman-photo" aria-label="이사장 사진 등록 예정">
+            <svg viewBox="0 0 160 190" aria-hidden="true">
+              <circle cx="80" cy="57" r="35"></circle>
+              <path d="M27 174c4-47 24-72 53-72s49 25 53 72"></path>
+            </svg>
+            <span>이사장 사진</span>
+            <small>사진 등록 예정</small>
+          </div>
+
+          <article class="chairman-message">
+            <p class="message-lead">
+              세종특별자치시 전세버스운송사업조합 홈페이지를
+              방문해 주신 여러분을 진심으로 환영합니다.
+            </p>
+            <p>
+              우리 조합은 조합원사의 권익을 보호하고 안정적인 경영을 지원하는 한편,
+              운수종사자 교육과 안전관리, 관계기관과의 긴밀한 협력을 통해
+              신뢰받는 전세버스 운송 문화를 만드는 데 힘쓰고 있습니다.
+            </p>
+            <p>
+              변화하는 운송 환경 속에서도 현장의 목소리를 먼저 듣고,
+              실질적인 행정 지원과 정확한 정보 제공으로 조합원 여러분께
+              도움이 되는 조합이 되겠습니다.
+            </p>
+            <p>
+              안전을 최우선 가치로 삼아 세종의 단체 이동을 책임지는
+              든든한 동반자가 될 수 있도록 최선을 다하겠습니다.
+            </p>
+            <div class="chairman-signature">
+              <span>사단법인 세종특별자치시 전세버스운송사업조합</span>
+              <strong>이사장 <em>전영진</em></strong>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="contact-section" id="contact" aria-labelledby="contactTitle">
-      <div class="section-shell contact-layout">
-        <div class="contact-copy reveal">
-          <p class="eyebrow light">CONTACT</p>
-          <h2 id="contactTitle">조합 업무 안내가<br>필요하신가요?</h2>
-          <p>실제 조합 연락처와 주소는 <code>site-config.js</code>에 입력하면 자동으로 표시됩니다.</p>
+    <section class="organization-section" id="organization" aria-labelledby="organizationTitle">
+      <div class="site-width">
+        <div class="section-heading centered">
+          <div>
+            <p>ORGANIZATION</p>
+            <h2 id="organizationTitle">조직도</h2>
+          </div>
+          <span>조합원 중심의 효율적인 업무 체계로 운영합니다.</span>
         </div>
 
-        <div class="contact-panel reveal">
-          <div class="contact-status">
-            <span></span>
-            <p>조합 운영 정보</p>
-            <strong data-config="contactStatus">등록 준비 중</strong>
+        <div class="organization-chart" aria-label="조합 조직도">
+          <div class="org-level org-general"><strong>총회</strong></div>
+          <div class="org-connector vertical"></div>
+          <div class="org-side-row">
+            <div class="org-level"><strong>감사</strong></div>
+            <div class="org-level org-board"><strong>이사회</strong></div>
           </div>
-          <dl>
-            <div><dt>전화</dt><dd data-config="phone">정보 입력 전</dd></div>
-            <div><dt>팩스</dt><dd data-config="fax">정보 입력 전</dd></div>
-            <div><dt>이메일</dt><dd data-config="email">정보 입력 전</dd></div>
-            <div><dt>주소</dt><dd data-config="address">정보 입력 전</dd></div>
-          </dl>
+          <div class="org-connector vertical"></div>
+          <div class="org-level org-chair">
+            <span>조합 대표</span>
+            <strong>이사장 전영진</strong>
+          </div>
+          <div class="org-connector vertical"></div>
+          <div class="org-level org-office">
+            <span>조합 업무 총괄</span>
+            <strong>사무국</strong>
+            <small>담당 우승희</small>
+          </div>
+          <div class="org-branch-line" aria-hidden="true"></div>
+          <div class="org-team-row">
+            <div class="org-level org-team"><strong>조합행정</strong><span>공문 · 행정지원</span></div>
+            <div class="org-level org-team"><strong>회원사지원</strong><span>민원 · 업무지원</span></div>
+            <div class="org-level org-team"><strong>안전·교육</strong><span>종사자 · 안전관리</span></div>
+          </div>
+        </div>
+        <p class="organization-note">※ 세부 임원 및 담당 업무는 조합 운영 현황에 따라 변경될 수 있습니다.</p>
+      </div>
+    </section>
+
+    <section class="education-section" id="education" aria-labelledby="educationTitle">
+      <div class="site-width">
+        <div class="section-heading">
+          <div>
+            <p>EDUCATION &amp; SAFETY</p>
+            <h2 id="educationTitle">종사자교육·안전운행</h2>
+          </div>
+          <span>안전한 운행을 위한 필수 정보를 확인해 주세요.</span>
+        </div>
+
+        <div class="education-grid">
+          <article>
+            <span>01</span>
+            <div class="education-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM8 9h8M8 13h5"></path></svg>
+            </div>
+            <h3>교육일정 안내</h3>
+            <p>운수종사자 신규·보수교육과 관련한 일정 및 준비사항을 안내합니다.</p>
+            <button type="button" data-resource-tab="education" data-scroll-resources>교육자료 확인</button>
+          </article>
+          <article>
+            <span>02</span>
+            <div class="education-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v5c0 5.1 3.4 8.2 8 9 4.6-.8 8-3.9 8-9V7zM8.5 12l2.2 2.2 4.8-5"></path></svg>
+            </div>
+            <h3>안전운행 자료</h3>
+            <p>교통사고 예방과 차량 점검을 위한 공식 기관의 안전자료를 제공합니다.</p>
+            <a href="https://main.kotsa.or.kr/main.do" target="_blank" rel="noopener noreferrer">교통안전공단</a>
+          </article>
+          <article>
+            <span>03</span>
+            <div class="education-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V9M12 20V4M19 20v-7M3 20h18"></path></svg>
+            </div>
+            <h3>전세버스 정보공시</h3>
+            <p>운송사업자와 차량의 교통안전 관련 공시 정보를 확인할 수 있습니다.</p>
+            <a href="https://www.kotsa.or.kr/safeinfo" target="_blank" rel="noopener noreferrer">정보공시 바로가기</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="information-section" id="information" aria-labelledby="informationTitle">
+      <div class="site-width">
+        <div class="section-heading">
+          <div>
+            <p>ASSOCIATION INFORMATION</p>
+            <h2 id="informationTitle">조합 안내</h2>
+          </div>
+          <span>세종 조합의 공식 등록정보와 연락처입니다.</span>
+        </div>
+
+        <div class="information-layout">
+          <div class="association-data">
+            <h3>(사) 세종특별자치시 전세버스운송사업조합</h3>
+            <dl>
+              <div><dt>대표자</dt><dd>전영진</dd></div>
+              <div><dt>고유번호</dt><dd>307-82-08985</dd></div>
+              <div><dt>법인등록번호</dt><dd>164721-0000922</dd></div>
+              <div><dt>주소</dt><dd>세종특별자치시 조치원읍 문화로 3-1 (우 30024)</dd></div>
+              <div><dt>대표전화</dt><dd><a href="tel:0448653258">044-865-3258</a></dd></div>
+              <div><dt>팩스</dt><dd>044-865-3236</dd></div>
+              <div><dt>이메일</dt><dd><a href="mailto:sejongbus@naver.com">sejongbus@naver.com</a></dd></div>
+            </dl>
+          </div>
+
+          <div class="location-panel">
+            <div class="location-graphic" aria-hidden="true">
+              <svg viewBox="0 0 520 250">
+                <path d="M-20 198C87 159 136 214 225 159s113-121 315-64"></path>
+                <path d="M-5 225c118-38 166 20 252-28s130-102 287-65"></path>
+                <circle cx="298" cy="124" r="11"></circle>
+                <circle cx="298" cy="124" r="22"></circle>
+              </svg>
+              <span>세종특별자치시<br>조치원읍</span>
+            </div>
+            <div class="location-copy">
+              <p>오시는 길</p>
+              <strong>세종특별자치시 조치원읍 문화로 3-1</strong>
+              <div>
+                <a href="https://map.kakao.com/link/search/세종특별자치시%20조치원읍%20문화로%203-1" target="_blank" rel="noopener noreferrer">카카오맵으로 보기</a>
+                <a href="tel:0448653258">전화 연결</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-section" aria-label="관련 기관">
+      <div class="site-width related-inner">
+        <strong>관련 기관</strong>
+        <div>
+          <a href="https://www.sejong.go.kr/" target="_blank" rel="noopener noreferrer">세종특별자치시</a>
+          <a href="https://main.kotsa.or.kr/main.do" target="_blank" rel="noopener noreferrer">한국교통안전공단</a>
+          <a href="https://www.molit.go.kr/" target="_blank" rel="noopener noreferrer">국토교통부</a>
+          <a href="https://nmcb.org/cooperative/user/main.do" target="_blank" rel="noopener noreferrer">전국전세버스공제조합</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
+    <div class="site-width footer-inner">
       <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-        <div><strong>세종전세버스운송사업조합</strong><small>SEJONG CHARTER BUS ASSOCIATION</small></div>
+        <span class="brand-symbol" aria-hidden="true"><span>S</span></span>
+        <div>
+          <strong>세종특별자치시 전세버스운송사업조합</strong>
+          <p>안전한 운행, 신뢰받는 전세버스, 함께하는 조합</p>
+        </div>
       </div>
-
-      <nav aria-label="관련 기관">
-        <a href="https://www.sejong.go.kr/" target="_blank" rel="noopener noreferrer">세종특별자치시</a>
-        <a href="https://main.kotsa.or.kr/main.do" target="_blank" rel="noopener noreferrer">한국교통안전공단</a>
-        <a href="https://www.molit.go.kr/" target="_blank" rel="noopener noreferrer">국토교통부</a>
-      </nav>
-
-      <p>© <span id="currentYear"></span> SEJONG CHARTER BUS ASSOCIATION. All rights reserved.</p>
-      <a class="to-top" href="#top" aria-label="맨 위로 이동">↑</a>
+      <div class="footer-info">
+        <p>세종특별자치시 조치원읍 문화로 3-1 (우 30024)</p>
+        <p>대표전화 044-865-3258 · 팩스 044-865-3236 · sejongbus@naver.com</p>
+        <p>대표자 전영진 · 고유번호 307-82-08985 · 법인등록번호 164721-0000922</p>
+      </div>
+      <small>Copyright © SEJONG CHARTERED BUS TRANSPORTATION ASSOCIATION. All Rights Reserved.</small>
     </div>
   </footer>
 
+  <a class="top-button" href="#top" aria-label="맨 위로">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"></path></svg>
+  </a>
+
   <div class="modal" id="appModal" hidden>
-    <div class="modal-backdrop" data-close-modal></div>
+    <button class="modal-backdrop" type="button" aria-label="닫기" data-close-modal></button>
     <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" type="button" aria-label="닫기" data-close-modal>×</button>
-      <p class="eyebrow" id="modalEyebrow">MEMBER SERVICE</p>
-      <h2 id="modalTitle">서비스 준비 안내</h2>
-      <p id="modalDescription">관리자 설정 후 이용할 수 있습니다.</p>
+      <button class="modal-close" type="button" aria-label="닫기" data-close-modal>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+      </button>
+      <p id="modalEyebrow">MEMBER SERVICE</p>
+      <h2 id="modalTitle">조합원 업무시스템</h2>
+      <p id="modalDescription"></p>
       <div class="modal-search" id="modalSearchArea" hidden>
-        <label>
-          <span class="sr-only">통합검색어</span>
-          <input id="siteSearchInput" type="search" placeholder="검색어를 입력하세요">
-        </label>
+        <input id="siteSearchInput" type="search" placeholder="공문·자료·교육 검색">
         <button id="siteSearchButton" type="button">검색</button>
       </div>
-      <a class="modal-action" id="modalAction" href="#resources">관련 자료 보기</a>
+      <a class="modal-action" id="modalAction" href="#resources">공문·자료 보기</a>
     </section>
   </div>
 
-  <script src="./site-config.js?v=sejong-association-1"></script>
-  <script src="./app.js?v=sejong-association-1"></script>
+  <script src="./site-config.js?v=formal-20260721"></script>
+  <script src="./app.js?v=formal-20260721"></script>
 </body>
 </html>

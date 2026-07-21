@@ -3,67 +3,73 @@ const config = window.SEJONG_ASSOCIATION_CONFIG || {};
 const resourceData = {
   notices: [
     {
-      type: "안내",
-      title: "세종전세버스운송사업조합 홈페이지 이용 안내",
-      description: "홈페이지 운영 전 최종 확인이 필요한 기본 안내문입니다.",
-      date: "2026.07.20"
-    },
-    {
       type: "공문",
-      title: "조합 공문 게시 영역이 준비되어 있습니다.",
-      description: "실제 공문 제목과 첨부파일을 등록하면 목록에 표시됩니다.",
-      date: "준비 중"
+      title: "세종조합 관리비 인상의 건",
+      description: "기존 150,000원에서 180,000원으로 인상되며 2026년 2월 1일 책임개시 계약 건부터 적용됩니다.",
+      date: "2026.02.02"
     },
     {
       type: "안내",
-      title: "운수종사자 관리시스템 연동 안내",
-      description: "관리자 설정에 시스템 주소를 입력하면 바로가기 버튼이 연결됩니다.",
-      date: "준비 중"
+      title: "세종특별자치시 전세버스운송사업조합 홈페이지 안내",
+      description: "조합 공문, 업무자료, 종사자 교육과 공식 기관 바로가기를 이용하실 수 있습니다.",
+      date: "2026.07.21"
     },
     {
       type: "안전",
-      title: "교통안전 관련 공식 기관 바로가기 안내",
-      description: "한국교통안전공단과 전세버스공제조합 링크를 확인할 수 있습니다.",
-      date: "2026.07.20"
+      title: "교통안전 관련 공식 기관 이용 안내",
+      description: "한국교통안전공단과 전세버스 교통안전정보 공시 서비스를 확인해 주세요.",
+      date: "상시"
+    },
+    {
+      type: "공제",
+      title: "전국전세버스공제조합 업무 바로가기",
+      description: "공제 관련 업무는 공식 공제조합 홈페이지에서 확인할 수 있습니다.",
+      date: "상시"
     }
   ],
   files: [
     {
       type: "서식",
-      title: "사업계획 변경 관련 서식 등록 영역",
-      description: "조합에서 사용하는 최신 서식을 등록할 수 있습니다.",
+      title: "사업계획 변경 관련 서식",
+      description: "조합에서 사용하는 최신 업무서식은 확정 후 이 영역에 등록됩니다.",
       date: "자료 준비 중"
     },
     {
       type: "법령",
-      title: "전세버스 운송사업 관련 법령·지침 자료",
-      description: "확정된 공식 자료만 선별해 제공하도록 구성했습니다.",
+      title: "전세버스 운송사업 관련 법령·지침",
+      description: "운송사업 관련 법령과 행정지침 자료를 분류해 제공합니다.",
       date: "자료 준비 중"
     },
     {
       type: "운영",
-      title: "차량·운수종사자 업무자료 등록 영역",
-      description: "차량 관리와 종사자 업무에 필요한 자료를 분류할 수 있습니다.",
+      title: "차량 및 운수종사자 업무자료",
+      description: "차량관리와 운수종사자 업무에 필요한 자료를 제공합니다.",
+      date: "자료 준비 중"
+    },
+    {
+      type: "정관",
+      title: "조합 정관 및 운영규정",
+      description: "공개가 확정된 조합 운영규정과 관련 자료를 제공합니다.",
       date: "자료 준비 중"
     }
   ],
   education: [
     {
       type: "교육",
-      title: "운수종사자 정기교육 일정 등록 영역",
-      description: "교육기관과 일정이 확정되면 날짜와 신청 링크가 표시됩니다.",
+      title: "운수종사자 정기교육 일정",
+      description: "교육기관과 일정이 확정되면 교육일자와 준비사항을 안내합니다.",
       date: "일정 준비 중"
     },
     {
       type: "안전",
-      title: "전세버스 교통안전 교육자료 안내",
-      description: "교육 영상과 안전수칙 자료를 연결할 수 있습니다.",
-      date: "자료 준비 중"
+      title: "전세버스 교통안전 교육자료",
+      description: "사고예방과 안전운행에 필요한 공식 교육자료를 안내합니다.",
+      date: "상시"
     },
     {
       type: "점검",
-      title: "출발 전 차량 점검 체크리스트",
-      description: "홈페이지 안전운행 영역에서 바로 사용할 수 있습니다.",
+      title: "출발 전 차량 안전점검 안내",
+      description: "운행 전 차량 상태와 필수 안전장비를 확인해 주세요.",
       date: "상시"
     }
   ]
@@ -94,7 +100,8 @@ function setMenu(open) {
 }
 
 menuButton?.addEventListener("click", () => {
-  setMenu(menuButton.getAttribute("aria-expanded") !== "true");
+  const shouldOpen = menuButton.getAttribute("aria-expanded") !== "true";
+  setMenu(shouldOpen);
 });
 
 mobileNav?.querySelectorAll("a").forEach((link) => {
@@ -102,13 +109,13 @@ mobileNav?.querySelectorAll("a").forEach((link) => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 900) {
+  if (window.innerWidth > 1120) {
     setMenu(false);
   }
 });
 
 window.addEventListener("scroll", () => {
-  siteHeader?.classList.toggle("scrolled", window.scrollY > 12);
+  siteHeader?.classList.toggle("scrolled", window.scrollY > 10);
 }, { passive: true });
 
 function escapeHtml(value) {
@@ -121,6 +128,10 @@ function escapeHtml(value) {
 }
 
 function renderResources() {
+  if (!resourceList) {
+    return;
+  }
+
   const keyword = resourceSearch?.value.trim().toLowerCase() || "";
   const items = (resourceData[currentResourceTab] || []).filter((item) => {
     const searchable = `${item.type} ${item.title} ${item.description} ${item.date}`.toLowerCase();
@@ -138,7 +149,9 @@ function renderResources() {
     </article>
   `).join("");
 
-  resourceEmpty.hidden = items.length !== 0;
+  if (resourceEmpty) {
+    resourceEmpty.hidden = items.length !== 0;
+  }
 }
 
 function selectResourceTab(tabName) {
@@ -161,31 +174,35 @@ resourceTabs.forEach((tab) => {
 
 resourceSearch?.addEventListener("input", renderResources);
 
-document.querySelectorAll("[data-resource-tab]").forEach((link) => {
-  link.addEventListener("click", () => {
-    selectResourceTab(link.dataset.resourceTab);
+document.querySelectorAll("[data-resource-tab]").forEach((element) => {
+  element.addEventListener("click", () => {
+    selectResourceTab(element.dataset.resourceTab);
+
+    if (element.hasAttribute("data-scroll-resources")) {
+      document.querySelector("#resources")?.scrollIntoView({ behavior: "smooth" });
+    }
   });
 });
 
 const modalContent = {
   memberLogin: {
     eyebrow: "MEMBER SERVICE",
-    title: "조합원 로그인",
-    description: "조합원 전용 시스템 주소가 아직 등록되지 않았습니다. site-config.js에 주소를 입력하면 이 버튼이 로그인 화면으로 연결됩니다.",
+    title: "조합원 업무시스템",
+    description: "조합원 전용 업무시스템 주소가 아직 등록되지 않았습니다. 이용 문의는 조합 사무국(044-865-3258)으로 연락해 주세요.",
     actionText: "공문·자료 보기",
     actionHref: "#resources"
   },
   driverSystem: {
-    eyebrow: "DRIVER SYSTEM",
-    title: "운수종사자 관리시스템",
-    description: "운수종사자 관리시스템 주소가 아직 등록되지 않았습니다. 관리자 설정 후 바로 이용할 수 있습니다.",
+    eyebrow: "DRIVER MANAGEMENT",
+    title: "운수종사자 관리",
+    description: "운수종사자 관리시스템 주소가 아직 등록되지 않았습니다. 관련 업무는 조합 사무국으로 문의해 주세요.",
     actionText: "교육 안내 보기",
-    actionHref: "#safety"
+    actionHref: "#education"
   },
   siteSearch: {
-    eyebrow: "SITE SEARCH",
+    eyebrow: "INTEGRATED SEARCH",
     title: "통합검색",
-    description: "공문·자료·교육일정에서 필요한 내용을 검색합니다.",
+    description: "공문·자료·교육안내에서 필요한 내용을 검색합니다.",
     actionText: "전체 자료 보기",
     actionHref: "#resources",
     search: true
@@ -220,9 +237,9 @@ function openModal(type, trigger) {
 
   requestAnimationFrame(() => {
     if (content.search) {
-      siteSearchInput.focus();
+      siteSearchInput?.focus();
     } else {
-      modal.querySelector(".modal-close").focus();
+      modal.querySelector(".modal-close")?.focus();
     }
   });
 }
@@ -255,8 +272,10 @@ document.addEventListener("keydown", (event) => {
 });
 
 function runSiteSearch() {
-  const keyword = siteSearchInput.value.trim();
-  resourceSearch.value = keyword;
+  const keyword = siteSearchInput?.value.trim() || "";
+  if (resourceSearch) {
+    resourceSearch.value = keyword;
+  }
   selectResourceTab("notices");
   closeModal();
   document.querySelector("#resources")?.scrollIntoView({ behavior: "smooth" });
@@ -269,78 +288,4 @@ siteSearchInput?.addEventListener("keydown", (event) => {
   }
 });
 
-function fillOrganizationConfig() {
-  const values = {
-    phone: config.phone || "정보 입력 전",
-    fax: config.fax || "정보 입력 전",
-    email: config.email || "정보 입력 전",
-    address: config.address || "정보 입력 전",
-    contactStatus: [config.phone, config.email, config.address].some(Boolean)
-      ? "운영 정보 등록됨"
-      : "등록 준비 중"
-  };
-
-  Object.entries(values).forEach(([key, value]) => {
-    document.querySelectorAll(`[data-config="${key}"]`).forEach((element) => {
-      element.textContent = value;
-    });
-  });
-}
-
-const checklist = [...document.querySelectorAll("#safetyChecklist input[type='checkbox']")];
-const progressBar = document.querySelector("#safetyProgressBar");
-const progressText = document.querySelector("#safetyProgressText");
-const storageKey = "sejong-association-safety-checklist";
-
-function updateChecklist() {
-  const checkedValues = checklist.filter((item) => item.checked).map((item) => item.value);
-  const percentage = checklist.length ? (checkedValues.length / checklist.length) * 100 : 0;
-  progressBar.style.width = `${percentage}%`;
-  progressText.textContent = `${checkedValues.length} / ${checklist.length} 완료`;
-
-  try {
-    localStorage.setItem(storageKey, JSON.stringify(checkedValues));
-  } catch (error) {
-    console.warn("체크리스트 저장을 사용할 수 없습니다.", error);
-  }
-}
-
-function restoreChecklist() {
-  try {
-    const savedValues = JSON.parse(localStorage.getItem(storageKey) || "[]");
-    checklist.forEach((item) => {
-      item.checked = savedValues.includes(item.value);
-    });
-  } catch (error) {
-    console.warn("저장된 체크리스트를 불러오지 못했습니다.", error);
-  }
-  updateChecklist();
-}
-
-checklist.forEach((item) => item.addEventListener("change", updateChecklist));
-document.querySelector("#resetChecklist")?.addEventListener("click", () => {
-  checklist.forEach((item) => {
-    item.checked = false;
-  });
-  updateChecklist();
-});
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll(".reveal").forEach((element, index) => {
-  element.style.transitionDelay = `${Math.min(index % 6, 4) * 55}ms`;
-  observer.observe(element);
-});
-
-document.querySelector("#currentYear").textContent = new Date().getFullYear();
-
 renderResources();
-fillOrganizationConfig();
-restoreChecklist();
