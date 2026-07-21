@@ -1345,47 +1345,135 @@ svg {
   background: var(--navy-800);
 }
 
-.related-section {
+.member-marquee-section {
+  padding: 34px 0 32px;
+  overflow: hidden;
   background: #fff;
   border-top: 1px solid var(--line);
 }
 
-.related-inner {
-  display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
-  align-items: stretch;
-  min-height: 82px;
-}
-
-.related-inner > strong {
+.member-marquee-heading {
   display: flex;
-  align-items: center;
-  color: #fff;
-  background: var(--navy-900);
-  justify-content: center;
-  font-size: 13px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 22px;
 }
 
-.related-inner > div {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.member-marquee-heading p {
+  margin: 0 0 6px;
+  color: var(--blue-600);
+  font-family: var(--font-en);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
 }
 
-.related-inner a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  color: var(--ink-600);
-  border-right: 1px solid var(--line);
-  font-size: 13px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.related-inner a:hover {
+.member-marquee-heading h2 {
+  margin: 0;
   color: var(--navy-900);
-  background: var(--paper);
+  font-size: 22px;
+  letter-spacing: -0.04em;
+}
+
+.member-marquee-heading > span {
+  color: var(--ink-500);
+  font-size: 13px;
+}
+
+.member-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.member-marquee::before,
+.member-marquee::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: clamp(20px, 6vw, 96px);
+  content: "";
+  pointer-events: none;
+}
+
+.member-marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, #fff 10%, rgba(255, 255, 255, 0));
+}
+
+.member-marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, #fff 10%, rgba(255, 255, 255, 0));
+}
+
+.member-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: member-logo-flow 42s linear infinite;
+}
+
+.member-marquee:hover .member-marquee-track,
+.member-marquee:focus-within .member-marquee-track {
+  animation-play-state: paused;
+}
+
+.member-logo-list {
+  display: flex;
+  flex: none;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.member-logo-card {
+  display: flex;
+  flex: 0 0 240px;
+  width: 240px;
+  height: 88px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dfe5eb;
+  border-radius: 4px;
+  box-shadow: 0 8px 22px rgba(13, 37, 63, 0.06);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+a.member-logo-card:hover,
+a.member-logo-card:focus-visible {
+  border-color: #9bb0c4;
+  box-shadow: 0 12px 28px rgba(13, 37, 63, 0.12);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.member-logo-card img {
+  display: block;
+  width: auto;
+  max-width: 200px;
+  height: auto;
+  max-height: 56px;
+  object-fit: contain;
+}
+
+.member-logo-card--zerocool img {
+  width: 188px;
+  max-height: 44px;
+}
+
+.member-logo-card--yeongjin img {
+  width: 232px;
+  max-width: none;
+  max-height: none;
+}
+
+@keyframes member-logo-flow {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .site-footer {
@@ -1720,16 +1808,9 @@ svg {
     border-bottom: 1px solid var(--line);
   }
 
-  .related-inner {
-    grid-template-columns: 110px minmax(0, 1fr);
-  }
-
-  .related-inner > div {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .related-inner a:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--line);
+  .member-logo-card {
+    flex-basis: 220px;
+    width: 220px;
   }
 }
 
@@ -2054,23 +2135,45 @@ svg {
     font-size: 19px;
   }
 
-  .related-inner {
-    width: 100%;
-    grid-template-columns: 1fr;
+  .member-marquee-section {
+    padding: 28px 0 26px;
   }
 
-  .related-inner > strong {
-    min-height: 48px;
+  .member-marquee-heading {
+    display: block;
+    margin-bottom: 18px;
   }
 
-  .related-inner > div {
-    grid-template-columns: 1fr 1fr;
+  .member-marquee-heading h2 {
+    font-size: 20px;
   }
 
-  .related-inner a {
-    min-height: 65px;
-    padding: 10px;
-    font-size: 11px;
+  .member-marquee-heading > span {
+    display: block;
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .member-logo-card {
+    flex-basis: 190px;
+    width: 190px;
+    height: 76px;
+  }
+
+  .member-logo-card img {
+    max-width: 166px;
+    max-height: 48px;
+  }
+
+  .member-logo-card--zerocool img {
+    width: 160px;
+  }
+
+  .member-logo-card--yeongjin img {
+    width: 190px;
+    max-width: none;
+    max-height: none;
   }
 
   .footer-inner {
@@ -2099,6 +2202,24 @@ svg {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .member-marquee {
+    overflow-x: auto;
+    padding: 2px 16px 12px;
+  }
+
+  .member-marquee::before,
+  .member-marquee::after {
+    display: none;
+  }
+
+  .member-marquee-track {
+    animation: none !important;
+  }
+
+  .member-logo-list[aria-hidden="true"] {
+    display: none;
   }
 
   *,
