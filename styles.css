@@ -2370,9 +2370,9 @@ a.member-logo-card:focus-visible {
   margin-bottom: 25px;
   padding-right: 70px;
   color: var(--navy-950);
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Serif KR", serif;
   font-size: clamp(22px, 2.4vw, 29px);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.55;
   letter-spacing: -0.045em;
 }
@@ -2394,8 +2394,8 @@ a.member-logo-card:focus-visible {
 
 .chairman-signature em {
   color: var(--navy-800);
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 900;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 700;
 }
 
 @media (max-width: 900px) {
