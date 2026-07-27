@@ -2553,3 +2553,71 @@ a.member-logo-card:focus-visible {
     height: 44px;
   }
 }
+
+/* Section-based information architecture */
+.home-page .resource-section,
+.home-page .chairman-section,
+.home-page .organization-section,
+.home-page .education-section,
+.home-page .information-section {
+  display: none;
+}
+
+.home-page .member-marquee-section {
+  margin-top: 0;
+}
+
+.subpage-main {
+  min-height: 60vh;
+  background: #f5f7fa;
+}
+
+.subpage-hero {
+  padding: 74px 0 64px;
+  color: #fff;
+  background:
+    linear-gradient(115deg, rgba(7, 39, 77, 0.98), rgba(16, 78, 135, 0.88)),
+    linear-gradient(90deg, #072c57, #0d5a9b);
+}
+
+.subpage-hero p {
+  margin: 0 0 16px;
+  color: #74b5f2;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+
+.subpage-hero h1 {
+  margin: 0;
+  font-family: "Noto Serif KR", serif;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.18;
+}
+
+.subpage-hero span {
+  display: block;
+  max-width: 720px;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.subpage-main .chairman-section,
+.subpage-main .organization-section,
+.subpage-main .resource-section,
+.subpage-main .education-section,
+.subpage-main .information-section {
+  display: block;
+}
+
+@media (max-width: 680px) {
+  .subpage-hero {
+    padding: 52px 0 46px;
+  }
+
+  .subpage-hero .site-width {
+    padding-inline: 20px;
+  }
+}
