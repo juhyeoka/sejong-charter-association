@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sejong-charter-association.onrender.com/sitemap.xml
