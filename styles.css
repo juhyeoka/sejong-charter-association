@@ -2277,15 +2277,9 @@ a.member-logo-card:focus-visible {
 
 .chairman-photo-frame {
   position: relative;
-  display: flex;
   min-height: 340px;
   overflow: hidden;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(222, 233, 243, 0.92)),
-    var(--paper);
+  background: #f4f6f8;
   border-bottom: 1px solid var(--line);
 }
 
@@ -2300,33 +2294,15 @@ a.member-logo-card:focus-visible {
 }
 
 .chairman-photo-frame::after {
-  position: absolute;
-  right: -40px;
-  bottom: -70px;
-  width: 220px;
-  height: 220px;
-  content: "";
-  border: 1px solid rgba(18, 63, 114, 0.12);
-  border-radius: 50%;
+  content: none;
 }
 
 .chairman-photo-frame img {
-  position: relative;
-  z-index: 1;
-  width: 116px;
-  height: 116px;
-  object-fit: contain;
-  opacity: 0.78;
-}
-
-.chairman-photo-frame span {
-  position: relative;
-  z-index: 1;
-  margin-top: 20px;
-  color: var(--navy-800);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  object-position: center 15%;
 }
 
 .chairman-photo-caption {
@@ -2445,12 +2421,10 @@ a.member-logo-card:focus-visible {
   }
 
   .chairman-photo-frame img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .chairman-photo-frame span {
-    display: none;
+    width: 100%;
+    height: 132px;
+    min-height: 132px;
+    object-position: center 17%;
   }
 
   .chairman-photo-caption {
