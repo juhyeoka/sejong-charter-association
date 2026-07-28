@@ -373,6 +373,11 @@ svg {
   padding-block: 74px;
 }
 
+.home-page .hero-inner {
+  grid-template-columns: minmax(0, 880px);
+  justify-content: start;
+}
+
 .hero-kicker {
   display: inline-flex;
   align-items: center;
@@ -991,7 +996,7 @@ svg {
 
 .chairman-signature em {
   margin-left: 8px;
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 25px;
   font-style: normal;
   font-weight: 700;
@@ -1460,12 +1465,12 @@ a.member-logo-card:focus-visible {
 }
 
 .member-logo-card--name {
-  background: #f8fafc;
+  background: #fff;
 }
 
 .member-logo-card--name span {
   color: var(--navy-900);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
   letter-spacing: -0.035em;
   white-space: nowrap;
@@ -2394,8 +2399,8 @@ a.member-logo-card:focus-visible {
 
 .chairman-signature em {
   color: var(--navy-800);
-  font-family: "Noto Serif KR", serif;
-  font-weight: 700;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 800;
 }
 
 @media (max-width: 900px) {
