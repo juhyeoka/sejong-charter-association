@@ -1059,16 +1059,53 @@ svg {
   background: #9eabb8;
 }
 
-.org-side-row {
+.org-governance {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 200px;
   width: 660px;
+  padding-top: 34px;
   margin-inline: auto;
 }
 
-.org-side-row .org-level {
+.org-governance::before {
+  position: absolute;
+  top: 0;
+  right: 115px;
+  left: 115px;
+  height: 1px;
+  content: "";
+  background: #9eabb8;
+}
+
+.org-governance::after {
+  position: absolute;
+  top: 0;
+  bottom: -34px;
+  left: 50%;
+  width: 1px;
+  content: "";
+  background: #9eabb8;
+  transform: translateX(-0.5px);
+}
+
+.org-governance .org-level {
   width: 100%;
+}
+
+.org-governance .org-level::before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 1px;
+  height: 34px;
+  content: "";
+  background: #9eabb8;
+}
+
+.org-governance + .org-chair {
+  margin-top: 34px;
 }
 
 .org-board {
@@ -2084,9 +2121,14 @@ a.member-logo-card:focus-visible {
     font-size: 22px;
   }
 
-  .org-side-row {
+  .org-governance {
     gap: 16px;
     width: 100%;
+  }
+
+  .org-governance::before {
+    right: 25%;
+    left: 25%;
   }
 
   .org-level {
@@ -2260,15 +2302,15 @@ a.member-logo-card:focus-visible {
 }
 
 .chairman-layout {
-  grid-template-columns: 300px minmax(0, 1fr);
-  gap: 34px;
-  align-items: stretch;
+  grid-template-columns: 330px minmax(0, 1fr);
+  gap: 38px;
+  align-items: start;
 }
 
 .chairman-photo {
   display: grid;
-  min-height: 460px;
-  grid-template-rows: minmax(0, 1fr) auto;
+  min-height: 0;
+  grid-template-rows: auto auto;
   color: var(--ink-950);
   background: #fff;
   border: 1px solid var(--line);
@@ -2277,7 +2319,8 @@ a.member-logo-card:focus-visible {
 
 .chairman-photo-frame {
   position: relative;
-  min-height: 340px;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: #f4f6f8;
   border-bottom: 1px solid var(--line);
@@ -2298,15 +2341,16 @@ a.member-logo-card:focus-visible {
 }
 
 .chairman-photo-frame img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 340px;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center 12%;
 }
 
 .chairman-photo-caption {
-  padding: 22px 24px;
+  padding: 20px 24px 22px;
 }
 
 .chairman-photo-caption strong {
@@ -2325,7 +2369,8 @@ a.member-logo-card:focus-visible {
 
 .chairman-message {
   position: relative;
-  padding: 46px 50px 38px;
+  min-height: 0;
+  padding: 42px 48px 34px;
   background: #fff;
   border: 1px solid var(--line);
   border-top: 5px solid var(--navy-800);
@@ -2333,11 +2378,7 @@ a.member-logo-card:focus-visible {
 }
 
 .chairman-message::before {
-  top: 22px;
-  right: 32px;
-  left: auto;
-  color: rgba(18, 63, 114, 0.08);
-  font-size: 108px;
+  content: none;
 }
 
 .chairman-message p {
@@ -2347,9 +2388,9 @@ a.member-logo-card:focus-visible {
 }
 
 .chairman-message .message-lead {
-  max-width: 740px;
-  margin-bottom: 25px;
-  padding-right: 70px;
+  max-width: 760px;
+  margin-bottom: 24px;
+  padding-right: 0;
   color: var(--navy-950);
   font-family: "Noto Serif KR", serif;
   font-size: clamp(22px, 2.4vw, 29px);
@@ -2381,19 +2422,16 @@ a.member-logo-card:focus-visible {
 
 @media (max-width: 900px) {
   .chairman-layout {
-    grid-template-columns: 240px minmax(0, 1fr);
+    grid-template-columns: 270px minmax(0, 1fr);
     gap: 24px;
   }
 
   .chairman-photo {
-    min-height: 410px;
-  }
-
-  .chairman-photo-frame {
-    min-height: 300px;
+    min-height: 0;
   }
 
   .chairman-message {
+    min-height: 0;
     padding: 38px 34px 32px;
   }
 }
@@ -2416,6 +2454,7 @@ a.member-logo-card:focus-visible {
 
   .chairman-photo-frame {
     min-height: 132px;
+    aspect-ratio: auto;
     border-right: 1px solid var(--line);
     border-bottom: 0;
   }
@@ -2435,18 +2474,17 @@ a.member-logo-card:focus-visible {
   }
 
   .chairman-message {
+    min-height: 0;
     padding: 32px 24px 28px;
     border-top-width: 4px;
   }
 
   .chairman-message::before {
-    top: 18px;
-    right: 15px;
-    font-size: 82px;
+    content: none;
   }
 
   .chairman-message .message-lead {
-    padding-right: 32px;
+    padding-right: 0;
     font-size: 21px;
   }
 
