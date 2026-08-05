@@ -188,7 +188,7 @@ const modalContent = {
   memberLogin: {
     eyebrow: "MEMBER SERVICE",
     title: "조합원 업무시스템",
-    description: "조합원 전용 업무시스템 주소가 아직 등록되지 않았습니다. 이용 문의는 조합 사무국(010-3371-7200)으로 연락해 주세요.",
+    description: "조합원 전용 업무시스템 주소가 아직 등록되지 않았습니다. 이용 문의는 조합 사무국(044-865-3258)으로 연락해 주세요.",
     actionText: "공문·자료 보기",
     actionHref: "#resources"
   },
